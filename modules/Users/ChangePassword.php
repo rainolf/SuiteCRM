@@ -67,7 +67,7 @@ if (isset($_POST['saveConfig'])) {
             // Send to new user wizard if it hasn't been run
             $ut = $GLOBALS['current_user']->getPreference('ut');
         }
-    if(empty($ut))
+    if(empty($ut)) {
         SugarApplication::redirect('index.php?module=Users&action=Wizard');
     }
 
